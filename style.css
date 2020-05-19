@@ -23,9 +23,14 @@ input[type="text"] {
     border: none;
 }
 
+input[type="text"]:focus {
+    outline: 0;
+}
+
 button {
     padding: 10px;
-    border: none
+    border: none;
+    cursor: pointer;
 }
 
 button#search {
@@ -36,20 +41,62 @@ button#search {
     background-color: rgb(196, 196, 196);
 }
 
+button#search:hover {
+    background-color: #aaa;
+    transition: all 0.3s;
+}
+
 button#random {
     border-radius: 3px;
     position: relative;
-    right: 20px;
+    left: 215px;
+    bottom: 36px;
     background: rgb(238, 207, 151);
+}
+
+button#random:hover {
+    background: rgb(231, 186, 101);
+    transition: all 0.3s;
 }
 
 #results {
     display: flex;
-    margin-top: 60px;
+    width: 80%;
+    margin: 80px auto;
+    flex-wrap: wrap;
 }
 
-#results div {
-    margin: 0 10px;
-    border: 1px solid red;
-    padding: 10px;
+.meals {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.meal {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 4px solid #fff;
+}
+
+.meal img {
+    width: 100%;
+}
+
+.meal h3 {
+    position: relative;
+    bottom: 130px;
+    visibility: hidden;
+}
+
+.meal:hover img {
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+
+.meal:hover h3 {
+    visibility: visible;
 }
