@@ -100,3 +100,7 @@ button#random:hover {
 .meal:hover h3 {
     visibility: visible;
 }
+
+ul li {
+    margin: 10px 0;
+}
